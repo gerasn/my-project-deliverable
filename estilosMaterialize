@@ -1,0 +1,115 @@
+p.success,
+p.error {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    background: #ff4141;
+}
+#error-container {
+    text-align: center;
+}
+/* Centrar el formulario vertical y horizontalmente */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura completa de la ventana */
+    background-color: #f4f4f4;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+/* Estilos de los campos de entrada */
+.input-field input {
+    font-size: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+/* Quitar los estilos predeterminados al enfocar */
+.input-field input:focus {
+    border-bottom: 2px solid #673ab7 !important; /* Mantén el color morado */
+    box-shadow: none !important; /* Sin sombras adicionales */
+}
+
+/* Evitar cambios de color en estados válidos/invalidos */
+.input-field input:valid,
+.input-field input:invalid {
+    border-bottom: 2px solid #673ab7 !important;
+    box-shadow: none !important;
+}
+
+/* Personalizar iconos en los campos de entrada */
+.input-field .prefix {
+    color: #673ab7 !important; /* Color morado para el icono */
+}
+
+.input-field .prefix:focus {
+    color: #673ab7 !important; /* Color constante al enfocar */
+}
+
+/* Quitar animación de Materialize en los bordes */
+.input-field input:focus ~ label {
+    color: #673ab7 !important; /* Etiqueta siempre morada al enfocar */
+}
+
+/* Estilos generales */
+/* Centrar manualmente el formulario */
+.card {
+    position: absolute;        /* Permite centrar manualmente */
+    top: 50%;                  /* Posiciona el elemento al 50% de la altura del contenedor */
+    left: 50%;                 /* Posiciona el elemento al 50% del ancho del contenedor */
+    transform: translate(-50%, -0%); /* Cambia el eje Y a -40% para bajar */
+    max-width: 400px;          /* Limita el tamaño máximo del formulario */
+    width: 200%;                /* Hace que el formulario sea responsive */
+    /*margin: auto;              /* Centra horizontalmente si es necesario */
+    padding: 20px;
+    background: #fff;          /* Fondo blanco */
+    border-radius: 10px !important;       /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: 'Lato', sans-serif; /* Mejora la legibilidad */
+}
+
+.logo-container img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo del botón */
+.button button {
+    background-color: #673ab7;
+    color: white;
+    border-radius: 10px; /* Bordes redondeados */
+    text-transform: none; /* Letra normal */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button button:hover {
+    background: linear-gradient(to right, #a74ee3, #ff1493, #b502be, #a74ee3);
+    background-size: 600% 600%;
+    animation: gradient 20s linear infinite;
+    filter: drop-shadow(0px 0px 30px #a74ee3);
+    font-weight: 400;
+    text-shadow: 0px 0px 3px #a74ee3;
+}
+
+p {
+    margin: 0.5rem 0;
+    color: #555; /* Color del texto adicional */
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 95%; /* Más ancho en dispositivos pequeños */
+    }
+}
